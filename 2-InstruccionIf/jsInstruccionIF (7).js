@@ -1,6 +1,8 @@
 function Mostrar()
 {
 //tomo la edad  
+    
+    //me quede aca la clase anterior!!!
     var edad
     var soltero
     var casado
