@@ -1,19 +1,19 @@
 function Mostrar()
 {
-//tomo la edad  
-    
-    //me quede aca la clase anterior!!!
-    var edad
-    var soltero
-    var casado
-    var divorciado
-    edad=document.getElementById("edad").value;
-   
+//tomo la edad
+    var edad;
+    var estadoCivil;
 
-    if (edad <=17 && casado)
+    edad=parseInt(document.getElementById("edad").value);
+    estadoCivil=document.getElementById("estadoCivil").value;
+
+    if(edad <18 && estadoCivil != "Soltero")
     {
-        alert("Es muy pequeño para NO ser soltero");
+        alert("Usted es muy chico para no ser soltero");
     }
+ 
+
+    
 	
 
 
