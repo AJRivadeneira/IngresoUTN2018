@@ -3,12 +3,7 @@ function Mostrar()
 //tomo el mes 
 var mesDelAño = document.getElementById('mes').value;
 switch (mesDelAño) {
-        case "Enero":
-        case "Febrero":
-        case "Marzo":
-        case "Abril":
-        case "Mayo":
-        case "Junio":
+        default:
         alert("Falta para el Invierno");
         break;
         case "Julio":
@@ -22,11 +17,5 @@ switch (mesDelAño) {
         alert("Ya pasamos el frio ahora hace calor");
         break;
     }
-
-
-alert (mesDelAño);
-
-
-
 
 }//FIN DE LA FUNCIÓN

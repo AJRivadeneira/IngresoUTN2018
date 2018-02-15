@@ -6,13 +6,7 @@ switch (mesDelAño) {
         case "Febrero":
         alert("Tiene 28 dias");
         break;
-        case "Enero":
-        case "Marzo":
-        case "Mayo":
-        case "Julio":
-        case "Agosto":
-        case "Octubre":
-        case "Diciembre":
+        default:
         alert("Tiene 31 dias");
         break;
         case "Septiembre":
