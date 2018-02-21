@@ -1,11 +1,24 @@
 function Mostrar()
 {
-
-	var contador=0;
 	var positivo=0;
 	var negativo=1;
-	
-	var respuesta='si';
+	var numero;
+	var respuesta;
+
+	do
+	{
+		numero=parseInt(prompt("Ingrese un numero"));
+		
+		if(numero >= 0)
+		{
+			positivo = positivo + numero;
+		}
+		else
+		{
+			negativo = negativo * numero;
+		}
+		respuesta = prompt("Ingrese s si desea continuar");
+	} while(respuesta == "s");
 
 
 document.getElementById('suma').value=positivo;
