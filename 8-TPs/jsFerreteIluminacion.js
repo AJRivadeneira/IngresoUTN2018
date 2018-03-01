@@ -9,10 +9,17 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio () 
-{   var lamparas;
-    var cantLamp;
-    var precioTotal;
-    var marca;
+{   var precioLamp = 35;
+    var descuento;
+    var impuestoIngBru;
+    var cantLamp = parseInt(document.getElementById("Cantidad").value);
+    var marca = parseInt(document.getElementById("Marca").value);
+    var precioFinal = parseInt(document.getElementById("precioDescuento").value);
+
+    if (precioFinal > 120) {
+        impuestoIngBru = precioFinal * 0.10;
+        alert("De impuestos por ingresos brutos pago " + impuestoIngBru);
+    }
     
  	
 }
