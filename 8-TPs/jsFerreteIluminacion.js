@@ -9,17 +9,80 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 
  */
 function CalcularPrecio () 
-{   var precioLamp = 35;
+{
+    var cantidad;
+    var marca; 
     var descuento;
-    var impuestoIngBru;
-    var cantLamp = parseInt(document.getElementById("Cantidad").value);
-    var marca = parseInt(document.getElementById("Marca").value);
-    var precioFinal = parseInt(document.getElementById("precioDescuento").value);
+    const precio= 35;
+    var IIBB;
+    var importeFinal;
+    var precioConDescuento;
+      
+ cantidad= document.getElementById("Cantidad").value;
+ marca = document.getElementById("Marca").value;
 
-    if (precioFinal > 120) {
-        impuestoIngBru = precioFinal * 0.10;
-        alert("De impuestos por ingresos brutos pago " + impuestoIngBru);
-    }
-    
- 	
+ switch(cantidad)
+ {
+   case "1":
+   case "2":
+     descuento= 0;
+     alert("el descuento es : " + descuento);
+     break;
+
+  case "3":
+  if (cantidad == 3 && marca == "ArgentinaLuz")
+  {
+      descuento= precio * .15;
+
+  }
+else if (cantidad == 3 && marca == "FelipeLamparas" )
+{
+   descuento = precio * .10;
+}
+else{
+    descuento= precio * .05;
+
+    break;
+}
+ case "4":
+ if ( cantidad == 4 && marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+  {
+    descuento= precio * .25;
+
+  } 
+else {
+    descuento = precio * .20;
+
+    break;
+}
+case "5":
+if ( cantidad == 5 && marca == "ArgentinaLuz")
+{
+    descuento= precio * .40;
+
+}
+else {
+    descuento = precio * .30;
+
+    break;
+}
+default:
+descuento= precio * .50;
+
+break;
+
+if (importeFinal>120)
+{
+   IIBB= importeFinal*.10
+   alert("Importe final $ " + importeFinal + " de los cuales $ " + IIBB + " es impuesto ingresos brutos");
+
+}
+else{
+alert("el importe final no suma mas de $ 120 ");
+}
+document.getElementById("PrecioConDescuento").value = precioConDescuento;
+precioConDescuento= precio - descuento
+ }
+ 
+
 }

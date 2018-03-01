@@ -5,38 +5,38 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 */
 
 function Rectangulo () 
-{   var largoTer;
-    var anchoTer;
-    var cantAlam;
-    largoTer=document.getElementById("Largo").value;
-    anchoTer=document.getElementById("Ancho").value;
-    largoTer=parseInt(largoTer);
-    anchoTer=parseInt(anchoTer);
-    cantAlam= (largoTer * 2 + anchoTer * 2) * 3;
-    alert("Se necesita comprar " + cantAlam + " metros de alambre");
+{ 
+    var largo 
+    var ancho 
+    var perimetro
 
+    largo = parseFloat(document.getElementById("Largo").value);
+    ancho = parseFloat(document.getElementById("Ancho").value);
+    perimetro = [(largo + ancho) *2] *3
+    alert("Se necesitan " + perimetro + " de alambre")
 }
 function Circulo () 
-{   var radioTer;
-    var cantAlam;
-    radioTer=document.getElementById("Radio").value;
-    radioTer=parseInt(radioTer);
-    cantAlam= (2 * Math.PI * radioTer);
-    alert("Se necesita comprar " + cantAlam.toFixed(2) + " metros de alambre");
-	
+{
+    var radio=parseFloat(document.getElementById("Radio").value);
+    var perimetro
+
+    perimetro= radio * 3 * (Math.PI);
+    alert("Se necesitan " + perimetro + " de alambre")
 }
 function Materiales () 
-{   var largoTer;
-    var anchoTer;
-    var cem;
-    var cal;
-    var superficie;
-    largoTer=document.getElementById("Largo").value;
-    anchoTer=document.getElementById("Ancho").value;
-    largoTer=parseInt(largoTer);
-    anchoTer=parseInt(anchoTer);
-    superficie= largoTer * anchoTer;
-    cal= superficie * 3;
-    cem= superficie * 2;
-    alert("La superficie es " + superficie + " m2 y necesita " + cal + " de cal y " + cem + " de cemento");
+{
+	var largo 
+    var ancho 
+    var perimetro
+    var cal
+    var cemento
+
+    largo = parseFloat(document.getElementById("Largo").value);
+    ancho = parseFloat(document.getElementById("Ancho").value);
+    perimetro = largo * ancho;
+    cal = perimetro * 3
+    cemento= perimetro * 2
+
+
+    alert("Se necesitan " + cal + " de cal" + " y " + cemento+ " de cemento")
 }
