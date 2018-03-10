@@ -34,6 +34,7 @@ function Mostrar()
         if (sexo == "m" && nota >= 6)
         {
             varArriba6++;
+            acumNotas++;
         }
 
         promedio = acumNotas / 6
